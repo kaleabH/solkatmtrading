@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+      
+      .carousel-caption h1{
+        color:#ffffff;
+      }
+      .navigation{
+      
+        margin-left:20px;
+       
+        /* width:70% !important; */
+      }
+      .navbar-shadow{
+    box-shadow: 0px 8px 8px -3px rgba(0,0,0,.5);
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+ * {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container1 {
+  position: relative;
+  /* max-height: 40%; */
+  width:60%;
+  height: 700px;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height:590px;
+  /* padding-top:400px; */
+  align-items:center;
+  justify-content:center;
+  /* margin-top:400px; */
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.prev{
+  left:0%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logo.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/carousel/">
+
+    <title>Sol Kal M</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    
+
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper navigation">
+      <div class="container position-fixed">
+        
+        <nav class="navbar navbar-default navbar-shadow navbar-static-top" style="width:86%;">
+          <div style=" margin-top:1px;" class="d-flex text-center flex-column">
+            <img style="border-radius:24px;" src="logo.png" width="80" height="52"/>
+            <p class="fs-4 h4" style="font-family:'Baskervville'; color:black; font-size:28px;">
+              <!-- <span style="color:green;">Sol Kat</span><span style="color:rgb(197, 197, 5);"> M</span> <span style="color:red;">Trading</span> -->
+             <span>Sol Kat M Trading PLC</span> </p>
+          </div>
+          <div class="container">
+            <div class="navbar-header navbar-nav">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" style="display:flex !important; justify-content:center!important;">
+              <ul class="nav navbar-nav navbar-center text-center">
+                <li ><a href="index.html">Home</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gemstones<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                   
+                    <li><a href="#">Aquamarine </a></li>
+                    <li><a href="#">Emerald </a></li>
+                    <li><a href="#">Sapphire </a></li>
+                    <li><a href="#">morganite</a></li>
+                    <li><a href="#">Ruby </a></li>
+                    <li><a href="#">Opal</a></li>
+                    <li><a href="#">Amber</a></li>
+                    <li><a href="#">citrine</a></li>
+                    <li><a href="#">Agate</a></li>
+                    <li><a href="#">Amazonite</a></li>
+                    <li><a href="#">Tantaniem</a></li>
+                    <li><a href="#">Tourmaline </a></li>
+                    <li><a href="#">Garnet</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                   aria-haspopup="true" aria-expanded="true">
+                    Contact Us <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><p class="title">Address</p></li>
+                    <hr/>
+                    <li><a>Holiday Hotel Addis Ababa Ethiopia</a></li>
+                    <li><a>solkatmtrading@gmail.com</a></li>
+                    <!-- <li><a>www.solkatmtrading.ml</a></li> -->
+                    
+                    <li><p class="title">Phone Numbers</p></li>
+                  
+                    <li><a>+251-955996854</a></li>
+                    <li><a>+251-911026957</a></li>
+                    <li><a>+33758166356</a></li>
+                    <li><a>+33778678199</a></li>
+
+                    
+                  </ul>
+                    
+                    
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="img/Aquamarine_ore1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>We are one of the most renowned for opal and other industrial minerals and gemstones in Ethiopia. We are also engaged in
+                 mining activities.. </h1>
+              <!-- <p>We are the major exporter in Ethiopia for opal and other Precious and semi precious gemstones. We are also engaged in
+              all mining activities. Contact as with your detail requirements, we are very much happy to work with any company who has
+              interest in our product..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="img/Emerald_ore1.jpeg" alt="Second slide">
+          <div class="container d-flex text-center">
+            <div class="carousel-caption">
+              <h1>The combined experience of our team in gemstones and industrial minerals gives us the competitive edge to deliver you need in industrial minerals and gemstones. And our mission is to help our
+                customers across every geography and class experience superior satisfaction through our quality products and services..</h1>
+              <!-- <p>The combined experience of our team in estate development and management gives us the competitive edge to deliver
+              projects ranging from small to large properties with innovation and specialized services. And our mission is to help our
+              customers across every geography and class experience superior satisfaction through our quality products and services..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="img/Sapphire_ore.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Contact as with your detail requirements, we are very much happy to work with any company who has
+                interest in our product..</h1>
+              <!-- <p>We are the major exporter in Ethiopia for opal and other Precious and semi precious gemstones. We are also engaged in
+              all mining activities. Contact as with your detail requirements, we are very much happy to work with any company who has
+              interest in our product..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="img/opal4.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1> come work with us, you will be more than satisfied </h1>
+              <!-- <p>The combined experience of our team in estate development and management gives us the competitive edge to deliver
+              projects ranging from small to large properties with innovation and specialized services. And our mission is to help our
+              customers across every geography and class experience superior satisfaction through our quality products and services..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+<!-- gallery -->
+<h2 style="text-align:center">Gallery</h2>
+
+<div class="container1 container text-center">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img/aq1.png" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img/3.jpg" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img/4.jpg" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img/5.jpg" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img/opal1.jpg" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img/opal5.jpg" style="width:100%; max-height:700px; padding-bottom:60px;">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/aq1.png" style="width:100%" onclick="currentSlide(1)" alt="Aquamarine">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/3.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sapphire">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/4.jpg" style="width:100%" onclick="currentSlide(3)" alt="Emerald">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/5.jpg" style="width:100%" onclick="currentSlide(4)" alt="Sapphire">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/opal1.jpg" style="width:100%" onclick="currentSlide(5)" alt="Opal">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img/opal5.jpg" style="width:100%" onclick="currentSlide(6)" alt="Opal">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "flex";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!-- gallery end -->
+    
+   
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      
+    </div><!-- /.container -->
+    <!-- FOOTER -->
+    <footer class="d-flex text-center flex-column" style="height:500px;">
+      <div class="pull-right d-flex flex-column text-center" >
+        <img style="  padding-bottom:5px; border-radius:24px;" src="logo.png" width="100" height="82"/>
+                <p class="fs-4" style=" font-family:'Baskervville'; color:white; font-size:28px; padding-top:15px;">
+                  <!-- <span style="color:green;">Sol Kat</span><span style="color:rgb(197, 197, 5);"> M</span> <span style="color:red;">Trading</span>  -->
+                  <span>Sol Kat M Trading PLC</span>
+                </p>
+      </div>
+      <!-- <div style="width: 90%; height:20%;">
+        <p style="font-size:15px;" class="">We’d love to hear more about your current or upcoming project and discuss how we can be of assistance.
+          Contact us to get
+          the conversation started and get your project one step closer to your goal!</p>
+
+      </div> -->
+      <hr>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        
+        
+      </div>
+      <hr>
+      <h5 class="end">&copy; 2022 Company, Inc</h5>
+       
+      
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+                    
+                    

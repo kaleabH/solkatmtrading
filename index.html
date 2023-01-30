@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <style>
+      .card{
+        height: 455px;
+        max-width: 380px;
+	      padding-top: 20px;
+	      background: #ebf1f5;
+	      border-radius: 20px;
+	      margin-right: 5px;
+        box-shadow: 3px 8px 8px -6px rgba(0,0,0,.5);
+      }
+      .carousel-caption h1{
+        color:#ffffff;
+      }
+      .navigation{
+        position:fixed !important; 
+        margin-left:20px;
+       
+        /* width:70% !important; */
+      }
+      .navbar-shadow{
+    box-shadow: 0px 8px 8px -3px rgba(0,0,0,.5);
+    }
+    .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="logo.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/carousel/">
+
+    <title>Sol Kal M</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper navigation">
+      <div class="container position-fixed">
+        
+        <nav class="navbar navbar-default navbar-shadow navbar-static-top" style="width:86%;">
+          <div style=" margin-top:1px;" class="d-flex text-center flex-column">
+            <img style="border-radius:24px;" src="logo.png" width="80" height="52"/>
+            <p class="fs-4 h4" style="font-family:'Baskervville'; color:black; font-size:28px;">
+              <!-- <span style="color:green;">Sol Kat</span><span style="color:rgb(197, 197, 5);"> M</span> <span style="color:red;">Trading</span> -->
+             <span>Sol Kat M Trading PLC</span> </p>
+          </div>
+          <div class="container">
+            <div class="navbar-header navbar-nav">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse " style="display:flex !important; justify-content:center !important;">
+              <ul class="nav navbar-nav navbar-right ">
+                <li ><a href="index.html">Home</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gemstones<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                   
+                    <li><a href="#">Aquamarine </a></li>
+                    <li><a href="#">Emerald </a></li>
+                    <li><a href="#">Sapphire </a></li>
+                    <li><a href="#">morganite</a></li>
+                    <li><a href="#">Ruby </a></li>
+                    <li><a href="#">Opal</a></li>
+                    <li><a href="#">Amber</a></li>
+                    <li><a href="#">citrine</a></li>
+                    <li><a href="#">Agate</a></li>
+                    <li><a href="#">Amazonite</a></li>
+                    <li><a href="#">Tantaniem</a></li>
+                    <li><a href="#">Tourmaline </a></li>
+                    <li><a href="#">Garnet</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                   aria-haspopup="true" aria-expanded="true">
+                    Contact Us <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><p class="title">Address</p></li>
+                    <hr/>
+                    <li><a>Holiday Hotel Addis Ababa Ethiopia</a></li>
+                    <li><a>solkatmtrading@gmail.com</a></li>
+                    <!-- <li><a>www.solkatmtrading.ml</a></li> -->
+                    
+                    <li><p class="title">Phone Numbers</p></li>
+                  
+                    <li><a>+251-955996854</a></li>
+                    <li><a>+251-911026957</a></li>
+                    <li><a>+33758166356</a></li>
+                    <li><a>+33778678199</a></li>
+
+                    
+                  </ul>
+                    
+                    
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+      </div>
+    </div>
+
+
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="img/Aquamarine_ore1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>We are one of the most renowned for opal and other industrial minerals and gemstones in Ethiopia. We are also engaged in
+                 mining activities.. </h1>
+              <!-- <p>We are the major exporter in Ethiopia for opal and other Precious and semi precious gemstones. We are also engaged in
+              all mining activities. Contact as with your detail requirements, we are very much happy to work with any company who has
+              interest in our product..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="img/Emerald_ore1.jpeg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The combined experience of our team in gemstones and industrial minerals gives us the competitive edge to deliver you need in industrial minerals and gemstones. And our mission is to help our
+                customers across every geography and class experience superior satisfaction through our quality products and services..</h1>
+              <!-- <p>The combined experience of our team in estate development and management gives us the competitive edge to deliver
+              projects ranging from small to large properties with innovation and specialized services. And our mission is to help our
+              customers across every geography and class experience superior satisfaction through our quality products and services..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="img/Sapphire_ore.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Contact as with your detail requirements, we are very much happy to work with any company who has
+                interest in our product..</h1>
+              <!-- <p>We are the major exporter in Ethiopia for opal and other Precious and semi precious gemstones. We are also engaged in
+              all mining activities. Contact as with your detail requirements, we are very much happy to work with any company who has
+              interest in our product..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="img/opal4.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1> come work with us, you will be more than satisfied </h1>
+              <!-- <p>The combined experience of our team in estate development and management gives us the competitive edge to deliver
+              projects ranging from small to large properties with innovation and specialized services. And our mission is to help our
+              customers across every geography and class experience superior satisfaction through our quality products and services..</p> -->
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <hr class="featurette-divider">
+    <h2  class="text-center mb-4"><div class=" text-success">We Provide </div></h2>
+   <hr>
+    <div class="container marketing justify-content-center">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row p-0 m-0 justify-content-end">
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/opal1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Black Opal</h2>
+          <p>Black Opal is the most valued of Opals and comes mainly from Lightning Ridge. High quality stones are very rare. The
+          term 'black opal' does not mean that the stone is completely black (a common mistake), it simply means the stone has a
+          dark body tone in comparison to a white opal. Easily distinguished by the blackness of the background "body tone" or
+          body colour..</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/opal2.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>White opals</h2>
+          <p>White opals with a base tone ranging from colourless to medium grey are called light opal. Some people refer to these as
+          "white" although this expression should only be used where the body colour is very milky. White opal is more common and
+          because of its body tone, generally does not show the colour as well as black opal. Nevertheless, white opals can still
+          be absolutely magnificent in colour if a good quality stone is found..</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/opal5.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Eagle Opal</h2>
+          <p>Opals of all varieties have been synthesized experimentally and commercially. The discovery of the ordered sphere
+          structure of precious opal led to its synthesis by Pierre Gilson in 1974. The resulting material is distinguishable from
+          natural opal by its regularity; under magnification, the patches of color are seen to be arranged in a "lizard skin" or
+          "chicken wire" pattern. Furthermore, synthetic opals do not fluoresce under ultraviolet light. Synthetics are also
+          generally lower in density and are often highly porous.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/e1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2> Emerald</h2>
+          <p>Emerald, the green variety of Beryl, is the most famous and valuable green gemstone. Its beautiful green color, combined
+          with durability and rarity, make it one of the most expensive gemstones. Deep green is the most desired color in
+          Emeralds. In general the paler the color of an Emerald, the lesser its value. Very pale colored stones are not called
+          Emeralds but rather "Green Beryl". They are sometimes heat treated, which causes their color to turn blue and transform
+          into Aquamarine.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/aq,3.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Aquamarine</h2>
+          <p>Aquamarine is pastel blue, greenish blue, or green-blue. The preferred aquamarine color is a dark blue to slightly
+          greenish blue with moderate intensity and is most striking in gems of over 5-cts. Fine stones show even blue color with
+          no zoning</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/sa1.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2> Sapphire</h2>
+          <p>Sapphire is the most precious and valuable blue gemstone. It is a very desirable gemstone due to its excellent color,
+          hardness, durability, and luster. In the gem trade, Sapphire without any color prefix refers to the blue variety of the
+          mineral Corundum. However, the term Sapphire encompasses all other gem varieties and colors of Corundum as well,
+          excluding Ruby, the red variety of Corundum, which has its own name since antiquity.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/Garnet.webp" alt="Generic placeholder image" width="140" height="140">
+          <h2>Garnet</h2>
+          <p>Garnets are a group of silicate minerals that have been used since the Bronze Age as gemstones and abrasives. All species of garnets possess similar physical properties and crystal forms, but differ in chemical composition. The different species are pyrope, almandine, spessartine, grossular, uvarovite and andradite.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/Tourmaline.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Tourmaline</h2>
+          <p>Tourmaline is a crystalline silicate mineral group in which boron is compounded with elements such as aluminium, iron, magnesium, sodium, lithium, or potassium. Tourmaline is a gemstone and can be found in a wide variety of colors.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+        <div class="col-lg-4 col-md-6 col-sm-12  card">
+          <img class="img-circle" src="img/Amazonite.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Amazonite</h2>
+          <p>Amazonite is a variety of potassium feldspar and is the mineral class of Microcline. It is part of the triclinic crystal system and has a vitreous luster. Amazonite comes in shades of purple, grey, green, and blue. Most often it is a greenish blue color. The meaning of Amazonite is to soothe anxiety and bring clarity..</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 col-md-6 col-sm-12  card -->
+
+      </div><!-- /.row -->
+
+
+     
+      <!-- /END THE FEATURETTES -->
+
+
+      
+    </div><!-- /.container -->
+    <!-- FOOTER -->
+    <footer class="d-flex text-center flex-column" style="height:500px;">
+      <div class="pull-right d-flex flex-column text-center" >
+        <img style="  padding-bottom:5px; border-radius:24px;" src="logo.png" width="100" height="82"/>
+                <p class="fs-4" style=" font-family:'Baskervville'; color:white; font-size:28px; padding-top:15px;">
+                  <!-- <span style="color:green;">Sol Kat</span><span style="color:rgb(197, 197, 5);"> M</span> <span style="color:red;">Trading</span>  -->
+                  <span>Sol Kat  M Trading PLC</span>
+                </p>
+      </div>
+      <!-- <div style="width: 90%; height:20%;">
+        <p style="font-size:15px;" class="">We’d love to hear more about your current or upcoming project and discuss how we can be of assistance.
+          Contact us to get
+          the conversation started and get your project one step closer to your goal!</p>
+
+      </div> -->
+      <hr>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        
+        
+      </div>
+      <hr>
+      <h5 class="end">&copy; 2022 Company, Inc</h5>
+       
+      
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+                    
+                    
